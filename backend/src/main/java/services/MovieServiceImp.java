@@ -2,20 +2,28 @@ package services;
 
 import java.util.List;
 
-import Entities.MoviesEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class MovieServiceImp implements MovieService{
+import Entities.MoviesEntity;
+import Repositiries.MovieRepo;
+
+@Service
+public class MovieServiceImp implements MovieService {
+
+	@Autowired
+	MovieRepo mi;
 
 	@Override
 	public List<MoviesEntity> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return mi.findAllMovies();
 	}
 
 	@Override
-	public MoviesEntity getByName(String name) {
+	public MoviesEntity getById(int Id) {
 		// TODO Auto-generated method stub
-		return null;
+		return mi.findById(Id);
 	}
 
 	@Override
@@ -30,4 +38,9 @@ public class MovieServiceImp implements MovieService{
 		return null;
 	}
 
+	@Override
+	public MoviesEntity createMovie(MoviesEntity mov) {
+		// TODO Auto-generated method stub
+		return mi.createMovie(mov);
+	}
 }

@@ -6,21 +6,22 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		
-		return new Class[] { WebConfig.class,JpaConfig.class };
-				 
+
+		return new Class[] { WebConfig.class, JpaConfig.class };
+
 	}
 
 	@Override
-	protected Class<?>[] getServletConfigClasses() {
+	protected Class<?>[] getServletConfigClasses() {	
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	
 	@Override
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
-		return new String[] {"/api/*"}; 	
+		return new String[] { "/api/*" };
 	}
 
 }
