@@ -24,7 +24,6 @@ public class MoviesController {
 	MovieService ms;
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public List<MoviesEntity> getAll() {
-		System.out.println("surprise mother fucekersssss");
 		return ms.getAll();
 	}
 
