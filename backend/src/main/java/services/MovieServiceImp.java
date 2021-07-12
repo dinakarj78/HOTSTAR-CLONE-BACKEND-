@@ -10,7 +10,7 @@ import Repositiries.MovieRepo;
 
 @Service
 public class MovieServiceImp implements MovieService {
-
+  
 	@Autowired
 	MovieRepo mi;
 
