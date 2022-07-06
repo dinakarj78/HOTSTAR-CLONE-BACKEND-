@@ -26,7 +26,6 @@ public class MoviesRepoImp implements MovieRepo {
 	@Override
 	public List<MoviesEntity> findAllMovies() {
 		// TODO Auto-generated method stub
-		System.out.println("SURPRISE MOTHER ******");
 		TypedQuery<MoviesEntity> query=em.createNamedQuery("Movies.findAll", MoviesEntity.class);
 		return query.getResultList();
 	}
